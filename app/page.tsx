@@ -12,12 +12,13 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "DigiNext - Công ty công nghệ hàng đầu",
-  description: "DigiNext cung cấp các giải pháp công nghệ toàn diện cho doanh nghiệp của bạn",
+  description:
+    "DigiNext cung cấp các giải pháp công nghệ toàn diện cho doanh nghiệp của bạn",
 };
 
 export default function Home() {
   return (
-    <>
+    <>    
       <ScrollUp />
       <Hero />
       <Features />

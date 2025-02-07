@@ -76,7 +76,7 @@ const menuData: Menu[] = [
   },
   {
     id: 5,
-    title: "Hỗ trợ",
+    title: "Liên hệ",
     path: "/contact",
     newTab: false,
   },

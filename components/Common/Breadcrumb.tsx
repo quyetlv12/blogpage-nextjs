@@ -1,3 +1,5 @@
+"use client";
+import { motion } from "framer-motion";
 import Link from "next/link";
 
 const Breadcrumb = ({
@@ -11,17 +13,36 @@ const Breadcrumb = ({
       <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 md:w-8/12 lg:w-7/12">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="w-full px-4 md:w-8/12 lg:w-7/12"
+            >
               <div className=" max-w-[570px] md:mb-0 lg:mb-12">
-                <h1 className="text-2xl font-bold text-black dark:text-white sm:text-3xl">
+                <motion.h1
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                  className="text-2xl font-bold text-black dark:text-white sm:text-3xl"
+                >
                   {pageName}
-                </h1>
-          
+                </motion.h1>
               </div>
-            </div>
-            <div className="w-full px-4 md:w-4/12 lg:w-5/12">
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              className="w-full px-4 md:w-4/12 lg:w-5/12"
+            >
               <div className="text-end">
-                <ul className="flex items-center md:justify-end">
+                <motion.ul
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 }}
+                  className="flex items-center md:justify-end"
+                >
                   <li className="flex items-center">
                     <Link
                       href="/"
@@ -34,14 +55,19 @@ const Breadcrumb = ({
                   <li className="text-base font-medium text-primary">
                     {pageName}
                   </li>
-                </ul>
+                </motion.ul>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
 
         <div>
-          <span className="absolute left-0 top-0 z-[-1]">
+          <motion.span
+            initial={{ opacity: 0, x: -100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="absolute left-0 top-0 z-[-1]"
+          >
             <svg
               width="287"
               height="254"
@@ -68,8 +94,13 @@ const Breadcrumb = ({
                 </linearGradient>
               </defs>
             </svg>
-          </span>
-          <span className="absolute right-0 top-0 z-[-1]">
+          </motion.span>
+          <motion.span
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            className="absolute right-0 top-0 z-[-1]"
+          >
             <svg
               width="628"
               height="258"
@@ -112,7 +143,7 @@ const Breadcrumb = ({
                 </linearGradient>
               </defs>
             </svg>
-          </span>
+          </motion.span>
         </div>
       </section>
     </>

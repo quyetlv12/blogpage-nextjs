@@ -1,9 +1,7 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
 const Header = () => {
@@ -56,7 +54,7 @@ const Header = () => {
                   sticky ? "py-5 lg:py-2" : "py-8"
                 } `}
               >
-                <Image
+                {/* <Image
                   src="/images/logo/logo-2.svg"
                   alt="logo"
                   width={140}
@@ -69,7 +67,10 @@ const Header = () => {
                   width={140}
                   height={30}
                   className="hidden w-full dark:block"
-                />
+                /> */}
+                <h1 className="text-2xl font-bold text-black dark:text-white sm:text-3xl">
+                  Logo
+                </h1>
               </Link>
             </div>
             <div className="flex w-full items-center justify-between px-4">
@@ -112,8 +113,8 @@ const Header = () => {
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
-                                ? "text-primary dark:text-white"
-                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                                ? "text-blue-700 dark:text-white"
+                                : "text-dark hover:text-blue-700 dark:text-white/70 dark:hover:text-white"
                             }`}
                           >
                             {menuItem.title}
@@ -167,13 +168,13 @@ const Header = () => {
                 </Link>
                 <Link
                   href="/signup"
-                  className="ease-in-up rounded-xl shadow-btn hover:shadow-btn-hover hidden bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9 shadow-lg"
+                  className="ease-in-up rounded-xl hover:shadow-btn-hover hidden bg-blue-700 px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9 shadow-lg"
                 >
                   Đăng kí
                 </Link>
-                <div>
+                {/* <div>
                   <ThemeToggler />
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

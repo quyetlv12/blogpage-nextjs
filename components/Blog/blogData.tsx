@@ -20,12 +20,42 @@ function BlogData({ params }: { params: { slug: string } }) {
   });
 
   const { title, created_at, createBy, content, categories }: Blog = data || {};
+
+  if (isLoading) {
+    return (
+      <section className="pb-[120px] pt-[150px]">
+        <div className="container">
+          <div className="-mx-4 flex flex-wrap justify-center">
+            <div className="w-full px-4 lg:w-8/12">
+              <div>
+                <div className="h-8 w-3/4 bg-gray-200 rounded animate-pulse mb-8"></div>
+                <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4">
+                  <div className="flex flex-wrap items-center">
+                    <div className="mb-5 mr-10 flex items-center">
+                      <div className="mr-4">
+                        <div className="h-10 w-10 rounded-full bg-gray-200 animate-pulse"></div>
+                      </div>
+                      <div className="w-32 h-4 bg-gray-200 rounded animate-pulse"></div>
+                    </div>
+                  </div>
+                </div>
+                <div className="mt-10">
+                  <div className="h-4 bg-gray-200 rounded animate-pulse mb-4"></div>
+                  <div className="h-4 bg-gray-200 rounded animate-pulse mb-4"></div>
+                  <div className="h-4 bg-gray-200 rounded animate-pulse mb-4"></div>
+                  <div className="h-4 w-2/3 bg-gray-200 rounded animate-pulse"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   return (
     <>
-      {isLoading ? (
-        <div>Loading...</div>
-      ) : (
-        <section className="pb-[120px] pt-[150px]">
+     <section className="pb-[120px] pt-[150px]">
           <div className="container">
             <div className="-mx-4 flex flex-wrap justify-center">
               <div className="w-full px-4 lg:w-8/12">
@@ -133,7 +163,6 @@ function BlogData({ params }: { params: { slug: string } }) {
             </div>
           </div>
         </section>
-      )}
     </>
   );
 }
