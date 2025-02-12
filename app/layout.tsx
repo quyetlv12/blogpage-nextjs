@@ -9,7 +9,7 @@ import NextTopLoader from "nextjs-toploader";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 import { Providers } from "./providers";
-
+import TopBar from "@/components/topBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
