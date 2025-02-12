@@ -3,47 +3,48 @@ import { Menu } from "@/types/menu";
 const menuData: Menu[] = [
   {
     id: 1,
-    title: "Trang chủ",
+    title: "TRANG CHỦ",
     path: "/",
     newTab: false,
   },
   {
     id: 2,
-    title: "Giới thiệu",
+    title: "GIỚI THIỆU", 
     path: "/about",
     newTab: false,
   },
   {
     id: 3,
-    title: "Dịch vụ",
+    title: "DỊCH VỤ VẬN CHUYỂN",
+    path: "/services",
     newTab: false,
     submenu: [
       {
-        id: 41,
+        id: 31,
         title: "Chuyển phát Hoả tốc",
         path: "/express",
         newTab: false,
       },
       {
-        id: 42,
-        title: "Chuyển phát Nhanh", 
-        path: "/fast",
+        id: 32,
+        title: "Chuyển phát Nhanh",
+        path: "/fast", 
         newTab: false,
       },
       {
-        id: 43,
+        id: 33,
         title: "Chuyển phát Tiết kiệm",
         path: "/economy",
         newTab: false,
       },
       {
-        id: 44,
+        id: 34,
         title: "Chuyển phát Quốc tế",
         path: "/international",
         newTab: false,
       },
       {
-        id: 45,
+        id: 35,
         title: "Chuyển phát Đường bộ",
         path: "/ground",
         newTab: false,
@@ -52,35 +53,21 @@ const menuData: Menu[] = [
   },
   {
     id: 4,
-    title: "Quy định chung",
-    path: "/about",
+    title: "HƯỚNG DẪN THỦ TỤC",
+    path: "/guide",
     newTab: false,
   },
   {
     id: 5,
-    title: "Tin tức",
-    path: "/blog",
+    title: "TIN TỨC",
+    path: "/news",
     newTab: false,
   },
   {
     id: 6,
-    title: "Vận đơn",
+    title: "LIÊN HỆ",
     path: "/contact",
     newTab: false,
-    submenu: [
-      {
-        id: 41,
-        title: "Tạo vận đơn",
-        path: "/about",
-        newTab: false,
-      },
-      {
-        id: 42,
-        title: "Tra cứu vận đơn",
-        path: "/contact",
-        newTab: false,
-      },
-    ],
   },
 ];
 export default menuData;

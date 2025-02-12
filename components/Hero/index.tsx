@@ -1,7 +1,6 @@
 "use client";
+import heroBg from "@/public/images/bg-hero-section.png";
 import { motion } from "framer-motion";
-import Link from "next/link";
-
 const Hero = () => {
   return (
     <motion.div
@@ -11,12 +10,13 @@ const Hero = () => {
     >
       <section
         id="home"
-        className="relative z-10 flex h-screen items-center justify-center overflow-hidden bg-white pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        className="relative z-10 flex h-screen items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat pb-16 pt-[120px] dark:bg-gray-dark md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+        style={{backgroundImage: `url(${heroBg.src})` , backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat"}}
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div
+              {/* <div
                 className="wow fadeInUp mx-auto max-w-[800px] text-center"
                 data-wow-delay=".2s"
               >
@@ -43,7 +43,7 @@ const Hero = () => {
                     Star on GitHub
                   </Link>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

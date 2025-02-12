@@ -1,10 +1,13 @@
 "use client";
+import logo from "@/public/images/header/logo-white.png";
+import vietnamFlag from '@/public/images/vietnam-flag.png';
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { IoLocationOutline } from "react-icons/io5";
+import { MdAccessTime, MdOutlinePhoneIphone } from "react-icons/md";
 import menuData from "./menuData";
-import Image from "next/image";
-import logo from "@/public/images/header/logo.png";
 const Header = () => {
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -40,15 +43,62 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${
+        className={`header left-0 top-0 z-40  w-full  ${
           sticky
-            ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
+            ? "fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition dark:bg-gray-dark dark:shadow-sticky-dark"
             : "absolute bg-transparent"
         }`}
       >
+        {/* TOP BAR */}
+        <div className={`${sticky ? "hidden" : "container !w-full"}`}>
+          <div className="flex items-center justify-between">
+            <div className="w-60 max-w-full">
+              <div>
+                <Link
+                  href="/"
+                  className={`header-logo block w-full ${sticky ? "hidden" : "block py-2"}`}
+                >
+                  <Image
+                    src={logo}
+                    alt="Logo"
+                    width={250}
+                    height={50}
+                    className="w-full"
+                  />
+                </Link>
+              </div>
+            </div>
+            {/* THÔNG TIN LIÊN HỆ */}
+            <div className="flex gap-5">
+              <div className="flex items-center gap-2">
+                <MdAccessTime size={30} color="red" />
+                <div>
+                  <p className="text-gray-700">Sundat CLOSED</p>
+                  <p className="font-bold text-black">MON - SAT 08:00 - 18:00</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <MdOutlinePhoneIphone size={30} color="red" />
+                <div>
+                  <p className="text-gray-700">Hotline</p>
+                  <p className="font-bold text-black">1900.4333</p>
+                </div>
+              </div>
+              <div className="flex items-center gap-2">
+                <IoLocationOutline size={30} color="red" />
+                <div>
+                  <p className="text-gray-700">
+                    102 Khúc Thừa Dụ, Phường Dịch Vọng
+                  </p>
+                  <p className="font-bold">Quận Cầu Giấy, Tp. Hà Nội, Việt Nam</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12">
+          <div className="relative -mx-4 flex items-center justify-between bg-[#2D2B3E] bg-opacity-40">
+            {/* <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
                 className={`header-logo block w-full ${
@@ -57,9 +107,9 @@ const Header = () => {
               >
                 <Image src={logo} alt="dgpost logo" className="w-full" width={250} height={50} />
               </Link>
-            </div>
+            </div> */}
             <div className="flex w-full items-center justify-between px-4">
-              <div>
+              <div className="flex items-center gap-2 justify-between w-full">
                 <button
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
@@ -84,7 +134,7 @@ const Header = () => {
                 </button>
                 <nav
                   id="navbarCollapse"
-                  className={`navbar absolute right-0 z-30 w-[250px] rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
+                  className={`navbar absolute right-0 z-30 w-full rounded border-[.5px] border-body-color/50 bg-white px-6 py-4 duration-300 dark:border-body-color/20 dark:bg-dark lg:visible lg:static lg:w-auto lg:border-none lg:!bg-transparent lg:p-0 lg:opacity-100 ${
                     navbarOpen
                       ? "visibility top-full opacity-100"
                       : "invisible top-[120%] opacity-0"
@@ -92,14 +142,14 @@ const Header = () => {
                 >
                   <ul className="block lg:flex lg:space-x-12">
                     {menuData.map((menuItem, index) => (
-                      <li key={index} className="group relative">
+                      <li key={index} className="group relative cursor-pointer">
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                            className={`flex py-2 text-base uppercase cursor-pointer text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 duration-300 ${
                               usePathName === menuItem.path
-                                ? "text-blue-700 dark:text-white"
-                                : "text-dark hover:text-blue-700 dark:text-white/70 dark:hover:text-white"
+                                ? "text-blue-700 px-4 rounded-lg" 
+                                : "text-white hover:text-blue-700 dark:text-white/70 dark:hover:text-white"
                             }`}
                           >
                             {menuItem.title}
@@ -108,7 +158,7 @@ const Header = () => {
                           <>
                             <p
                               onClick={() => handleSubmenu(index)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                              className="flex items-center justify-between cursor-pointer py-2 text-base uppercase  text-white group-hover:text-primary dark:text-white/70 dark:group-hover:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             >
                               {menuItem.title}
                               <span className="pl-3">
@@ -131,7 +181,11 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
-                                  className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
+                                  className={`block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3 ${
+                                    usePathName === submenuItem.path 
+                                      ? "bg-blue-700 text-white"
+                                      : ""
+                                  }`}
                                 >
                                   {submenuItem.title}
                                 </Link>
@@ -143,24 +197,27 @@ const Header = () => {
                     ))}
                   </ul>
                 </nav>
+                <div>
+                  <Image src={vietnamFlag} alt="vietnam flag" width={50} height={50} />
+                </div>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
-                {/* <Link
+              {/* <div className="flex items-center justify-end pr-16 lg:pr-0">
+                <Link
                   href="/signin"
                   className="hidden  px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
                 >
                   Đăng nhập
-                </Link> */}
-                {/* <Link
+                </Link>
+                <Link
                   href="/signup"
                   className="ease-in-up rounded-xl hover:shadow-btn-hover hidden bg-blue-700 px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9 shadow-lg"
                 >
                   Đăng nhập
-                </Link> */}
-                {/* <div>
+                </Link>
+                <div>
                   <ThemeToggler />
-                </div> */}
-              </div>
+                </div>
+              </div> */}
             </div>
           </div>
         </div>
