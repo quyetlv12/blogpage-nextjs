@@ -9,7 +9,6 @@ import NextTopLoader from "nextjs-toploader";
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 import { Providers } from "./providers";
-import TopBar from "@/components/topBar";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -22,7 +21,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="en">
       <head />
       <body
-        className={`min-h-screen bg-[#FCFCFC] dark:bg-black ${inter.className}`}
+        className={`min-h-screen overflow-x-hidden bg-[#FCFCFC] dark:bg-black ${inter.className}`}
       >
         <QueryClientProvider client={queryClient}>
           <Providers>

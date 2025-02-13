@@ -251,7 +251,7 @@ const Footer = () => {
                   href="/dich-vu-dgpost"
                   className="flex items-center gap-2"
                 >
-                  <IoIosArrowForward size={20} color="#000" /> DỊCH VỤ DGPOST
+                  <IoIosArrowForward size={20} color="#000" /> Dịch vụ DGPost
                 </Link>
               </li>
 
@@ -260,7 +260,7 @@ const Footer = () => {
                   href="/dich-vu-kho-van"
                   className="flex items-center gap-2"
                 >
-                  <IoIosArrowForward size={20} color="#000" /> DỊCH VỤ KHO VẬN
+                  <IoIosArrowForward size={20} color="#000" /> Dịch vụ kho vận
                 </Link>
               </li>
 
@@ -269,8 +269,8 @@ const Footer = () => {
                   href="/dich-vu-van-tai-noi-tinh"
                   className="flex items-center gap-2"
                 >
-                  <IoIosArrowForward size={20} color="#000" /> DỊCH VỤ VẬN TẢI
-                  NỘI TỈNH
+                  <IoIosArrowForward size={20} color="#000" /> Dịch vụ vận tải
+                  nội tỉnh
                 </Link>
               </li>
 
@@ -279,8 +279,8 @@ const Footer = () => {
                   href="/dich-vu-van-tai-lien-tinh"
                   className="flex items-center gap-2"
                 >
-                  <IoIosArrowForward size={20} color="#000" /> DỊCH VỤ VẬN TẢI
-                  LIÊN TỈNH
+                  <IoIosArrowForward size={20} color="#000" /> Dịch vụ vận tải
+                  liên tỉnh
                 </Link>
               </li>
 
@@ -289,8 +289,8 @@ const Footer = () => {
                   href="/dich-vu-xu-ly-fulfillment"
                   className="flex items-center gap-2"
                 >
-                  <IoIosArrowForward size={20} color="#000" /> DỊCH VỤ XỬ LÝ
-                  FULFILLMENT
+                  <IoIosArrowForward size={20} color="#000" /> Dịch vụ xử lý
+                  fulfillment
                 </Link>
               </li>
 
@@ -299,8 +299,8 @@ const Footer = () => {
                   href="/dich-vu-quan-ly-chuoi-cung-ung"
                   className="flex items-center gap-2"
                 >
-                  <IoIosArrowForward size={20} color="#000" /> DỊCH VỤ QUẢN LÝ
-                  CHUỖI CUNG ỨNG
+                  <IoIosArrowForward size={20} color="#000" /> Dịch vụ quản lý
+                  chuỗi cung ứng
                 </Link>
               </li>
             </ul>

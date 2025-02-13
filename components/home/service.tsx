@@ -44,6 +44,12 @@ const Service = () => {
           >
             {[
               {
+                image: service4,
+                title: "Kho vận & Phân phối",
+                description:
+                  "Dịch vụ kho bãi và phân phối hàng hóa chuyên nghiệp",
+              },
+              {
                 image: service1,
                 title: "Vận tải Đường biển",
                 description:
@@ -61,15 +67,13 @@ const Service = () => {
                 description:
                   "Dịch vụ vận chuyển hàng hóa bằng đường hàng không nhanh chóng",
               },
-              {
-                image: service4,
-                title: "Kho vận & Phân phối",
-                description:
-                  "Dịch vụ kho bãi và phân phối hàng hóa chuyên nghiệp",
-              },
             ].map((service, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="cursor-pointer rounded-[100px] bg-none transition-all duration-300 hover:scale-105 dark:bg-gray-dark"
               >
                 <Image
@@ -80,7 +84,7 @@ const Service = () => {
                 <h3 className="mb-4 text-xl font-bold text-black transition-colors hover:text-primary dark:text-white dark:hover:text-primary">
                   {service.title}
                 </h3>
-              </div>
+              </motion.div>
             ))}
           </motion.div>
           <div className="mt-10">
@@ -115,7 +119,7 @@ const Service = () => {
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
@@ -124,9 +128,9 @@ const Service = () => {
         <motion.div
           className="absolute -bottom-[120px] right-0 z-10 select-none"
           initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.8 }}
         >
           <Image
             src={truckimg}
@@ -153,19 +157,21 @@ const Service = () => {
           <h3 className="text-center text-gray-500">
             The MONA is a big BU of Indo-Trans Logistics Corporation and ITL{" "}
           </h3>
-          <h3  className="text-center text-gray-500">Logistics to tap into Vietnam’s fast growing market</h3>
+          <h3 className="text-center text-gray-500">
+            Logistics to tap into Vietnam’s fast growing market
+          </h3>
         </div>
 
         <div className="mt-10 grid grid-cols-3 gap-5">
           {services.map((service, index) => (
-            <motion.div 
+            <motion.div
               key={service.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
             >
-              <div className="relative hover:scale-105 transition-transform duration-300 cursor-pointer">
+              <div className="relative cursor-pointer transition-transform duration-300 hover:scale-105">
                 <Image src={service.image} alt={service.title} />
                 <h3 className="absolute bottom-0 left-0 w-full bg-[#19519F] px-4 py-5 font-bold text-white">
                   {service.title}

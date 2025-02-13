@@ -1,19 +1,16 @@
-import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
-import Contact from "@/components/Contact";
 import Hero from "@/components/Hero";
+import About from "@/components/home/about";
+import News from "@/components/home/news";
+import Proccess from "@/components/home/proccess";
 import Service from "@/components/home/service";
-import Pricing from "@/components/Pricing";
-import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
+import Support from "@/components/home/support";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "DigiNext - Công ty công nghệ hàng đầu",
+  title: "DGN Logistics",
   description:
-    "DigiNext cung cấp các giải pháp công nghệ toàn diện cho doanh nghiệp của bạn",
+    "DGN Logistics là công ty vận tải hàng hóa chuyên nghiệp, cung cấp dịch vụ vận chuyển hàng hóa bằng đường bộ, đường biển và đường hàng không.",
 };
 
 export default function Home() {
@@ -21,15 +18,11 @@ export default function Home() {
     <>    
       <ScrollUp />
       <Hero />
-      {/* <Features /> */}
       <Service />
-      <Video />
-      <Brands />
-      <AboutSectionOne />
-      <AboutSectionTwo />
-      <Testimonials />
-      <Pricing />
-      <Contact />
+      <Support />
+      <About />
+      <News />
+      <Proccess />
     </>
   );
 }

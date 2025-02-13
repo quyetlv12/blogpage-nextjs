@@ -10,7 +10,7 @@ const menuData: Menu[] = [
   {
     id: 2,
     title: "GIỚI THIỆU", 
-    path: "/about",
+    path: "/blog",
     newTab: false,
   },
   {
@@ -60,7 +60,7 @@ const menuData: Menu[] = [
   {
     id: 5,
     title: "TIN TỨC",
-    path: "/news",
+    path: "/blog",
     newTab: false,
   },
   {

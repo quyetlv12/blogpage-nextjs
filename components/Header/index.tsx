@@ -97,7 +97,7 @@ const Header = () => {
           </div>
         </div>
         <div className="container">
-          <div className="relative -mx-4 flex items-center justify-between bg-[#2D2B3E] bg-opacity-40">
+          <div className="relative -mx-4 flex items-center justify-between bg-[#2D2B3E] rounded-2xl bg-opacity-40">
             {/* <div className="w-60 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
