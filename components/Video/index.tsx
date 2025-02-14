@@ -4,7 +4,6 @@ import { motion, useInView } from "framer-motion";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import ModalVideo from "react-modal-video";
-import SectionTitle from "../Common/SectionTitle";
 
 const Video = () => {
   const [isOpen, setOpen] = useState(false);
@@ -18,26 +17,17 @@ const Video = () => {
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8, delay: 0.2 }}
     >
-      <section className="relative z-10 py-16 md:py-20 lg:py-28">
+      <section className="relative z-10 ">
         <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <SectionTitle
-              title="We are ready to help"
-              paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
-              center
-              mb="80px"
-            />
-          </motion.div>
-
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
-                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
+                animate={
+                  isInView
+                    ? { opacity: 1, scale: 1 }
+                    : { opacity: 0, scale: 0.8 }
+                }
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
                 data-wow-delay=".15s"

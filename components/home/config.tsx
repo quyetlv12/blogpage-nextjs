@@ -25,31 +25,37 @@ export const services = [
     id: 1,
     title: "Dịch vụ DGPOST",
     image: second,
+    className : "polygon(0 20%, 100% 0, 100% 100%, 0% 100%)"
   },
   {
     id: 2,
     title: "Dịch vụ Kho Vận",
     image: third,
+    className : "polygon(0 20%, 100% 0, 100% 100%, 0% 100%)"
   },
   {
     id: 3,
     title: "Vận tải Nội Tỉnh",
     image: fourth,
+    className : "polygon(0 20%, 100% 0, 100% 100%, 0% 100%)"
   },
   {
     id: 4,
     title: "Vận tải Liên Tỉnh",
     image: fifth,
+    className : "polygon(0 0, 100% 20%, 100% 100%, 0% 100%);"
   },
   {
     id: 5,
     title: "Dịch vụ xử lý FULFILLMENT",
     image: sixth,
+    className : "polygon(0 1%, 100% 20%, 100% 100%, 0% 100%);"
   },
   {
     id: 6,
     title: "Quản lý chuỗi cung ứng",
     image: seventh,
+    className : "polygon(0 1%, 100% 20%, 100% 100%, 0% 100%);"
   },
 ];
 

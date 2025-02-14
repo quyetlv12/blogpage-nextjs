@@ -1,24 +1,23 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
-import AboutSectionTwo from "@/components/About/AboutSectionTwo";
-import Breadcrumb from "@/components/Common/Breadcrumb";
-
+import BannerTop from "@/components/About/bannerTop";
+import Mission from "@/components/About/mission";
+import Parameter from "@/components/About/parameter";
+import Prize from "@/components/About/prize";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Page | Free Next.js Template for Startup and SaaS",
-  description: "This is About Page for Startup Nextjs Template",
-  // other metadata
+  title: "Giới thiệu",
+  description: "Giới thiệu về DGN Logistics",
 };
 
 const AboutPage = () => {
   return (
     <>
-      <Breadcrumb
-        pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
-      />
+      <BannerTop />
       <AboutSectionOne />
-      <AboutSectionTwo />
+      <Parameter />
+      <Mission />
+      <Prize />
     </>
   );
 };

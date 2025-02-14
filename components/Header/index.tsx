@@ -181,7 +181,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
-                                  className={`block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3 ${
+                                  className={`block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3 uppercase font-bold hover:bg-[#174EA1] hover:text-white transition-all duration-300 ${
                                     usePathName === submenuItem.path 
                                       ? "bg-blue-700 text-white"
                                       : ""

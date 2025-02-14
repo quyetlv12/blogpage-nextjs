@@ -26,29 +26,21 @@ const Footer = () => {
 
           <div>
             <p>ĐĂNG KÝ NHẬN BẢN TIN TỪ DGN LOGISTICS</p>
-            <p>Giữ cập nhật về chính sách, thông tin mới nhất.  </p>
+            <p>Giữ cập nhật về chính sách, thông tin mới nhất.</p>
           </div>
           <div className="flex items-center">
             <input
               type="email"
               placeholder="Nhập email của bạn vào đây..."
-              className=" w-[250px] rounded-l-full border-2 border-black  px-4 py-2 focus:border-red-500 focus:outline-none"
+              className=" w-[250px] rounded-l-full border-[1px] border-black  px-4 py-2 focus:border-red-500 focus:outline-none"
             />
-            <button className="rounded-r-full border-2 border-l-0 border-black bg-[#FF1F1F]  px-6 py-2 text-white hover:bg-red-600">
+            <button className="rounded-r-full border-[1px] border-l-0 border-black bg-[#FF1F1F]  px-6 py-2 text-white hover:bg-red-600">
               ĐĂNG KÝ
             </button>
           </div>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-4 lg:gap-x-12 lg:gap-y-12">
           <div className="w-full lg:flex lg:flex-col lg:items-center">
-            {/* <Image
-              className="hidden w-[350px] rounded-md lg:block"
-              src={logo}
-              alt="Logo"
-              width={300}
-              height={300}
-            /> */}
-
             <div className="flex flex-col items-center justify-center lg:hidden lg:flex-row">
               <Image
                 className="mb-2 w-[350px] rounded-md"

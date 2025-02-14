@@ -173,9 +173,12 @@ const Service = () => {
             >
               <div className="relative cursor-pointer transition-transform duration-300 hover:scale-105">
                 <Image src={service.image} alt={service.title} />
-                <h3 className="absolute bottom-0 left-0 w-full bg-[#19519F] px-4 py-5 font-bold text-white">
+                <div className="absolute bottom-0 left-0 w-full bg-[#19519F] px-4 py-5" style={{clipPath: service.className}}>
+                <h3 className=" font-bold text-white">
                   {service.title}
                 </h3>
+                </div>
+
               </div>
             </motion.div>
           ))}

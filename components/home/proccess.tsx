@@ -1,11 +1,11 @@
 "use client";
 import bg from "@/public/images/proccess/bg.png";
 import lineWave from "@/public/images/proccess/linewave.png";
+import { motion } from "framer-motion";
 import _ from "lodash";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { processSteps } from "./config";
-import { motion } from "framer-motion";
 
 const Proccess = () => {
   const [quality, setQuality] = useState(0);
@@ -31,7 +31,7 @@ const Proccess = () => {
       </h1>
       <div className="mt-8 flex w-full justify-center">
         <motion.div
-          className="container flex w-full overflow-hidden rounded-lg bg-[#1868D1] py-3 text-white"
+          className="container flex w-full overflow-hidden rounded-[50px] bg-[#1868D1] py-3 text-white"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
