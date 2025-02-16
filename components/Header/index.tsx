@@ -50,7 +50,7 @@ const Header = () => {
         }`}
       >
         {/* TOP BAR */}
-        <div className={`${sticky ? "hidden" : "container !w-full"}`}>
+        <div className={`${sticky ? "hidden " : "container !w-full hidden lg:block "}`}>
           <div className="flex items-center justify-between">
             <div className="w-60 max-w-full">
               <div>

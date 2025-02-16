@@ -1,7 +1,7 @@
 import mapIcon from "@/public/images/service/dichvu/map.png";
-import operationIcon from "@/public/images/service/dichvu/operation.png";
-import securityIcon from "@/public/images/service/dichvu/security.png";
-import trackingIcon from "@/public/images/service/dichvu/tracking.png";
+import operationIcon from "@/public/images/service/dichvu/location.png";
+import securityIcon from "@/public/images/service/dichvu/safe.png";
+import trackingIcon from "@/public/images/service/dichvu/truck.png";
 
 export const fourCard = [
   {
